@@ -1,0 +1,11 @@
+<li>
+    <a uiSref="view" [uiParams]="{ itemId: item.id }">
+        {{item.firstName + ' ' + item.lastName}}
+    </a>
+    <a uiSref="edit" [uiParams]="{ itemId: item.id }">
+        [edit]
+    </a>
+    <a href="#" (click)="deleteItem(item.id)">
+        [delete]
+    </a>
+</li>

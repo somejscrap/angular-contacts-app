@@ -1,0 +1,8 @@
+<h3>Контакты</h3>
+<h4 *ngIf="!list.length">
+  список контактов пуст
+</h4>
+<ul>
+  <item *ngFor="let item of list" [item]="item" (itemIdToDelete)="deleteItem($event)"></item>
+</ul>
+<button uiSref="edit" [uiParams]="{ itemId: null }">Добавить</button>

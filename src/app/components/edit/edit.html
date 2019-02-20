@@ -1,0 +1,23 @@
+<h3 *ngIf="item.id">
+    Edit Contact
+  </h3>
+  <h3 *ngIf="!item.id">
+    Add Contact
+  </h3>
+  <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+    <div class="form-field">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required [(ngModel)]="item.firstName" name="firstName"/>
+    </div>
+    <div class="form-field">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required [(ngModel)]="item.lastName" name="lastName"/>
+    </div>
+    <div class="form-field">
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" required [(ngModel)]="item.phone" name="phone"/>
+    </div>
+    
+    <button type="submit">Save</button>
+    <button uiSref="list">Close</button>
+  </form>
