@@ -1,23 +1,20 @@
-<h3 *ngIf="item.id">
-    Редактирование
-  </h3>
-  <h3 *ngIf="!item.id">
-    Новый контакт
-  </h3>
-  <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-    <div class="form-field">
-      <label for="firstName">Имя:</label>
-      <input type="text" id="firstName" required [(ngModel)]="item.firstName" name="firstName"/>
+<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+  <fieldset>
+    <legend *ngIf="item.id" class="doc">Редактирование</legend>
+    <legend *ngIf="!item.id" class="doc">Новый контакт</legend>
+    <div class="input-group vertical">
+      <label for="firstName">Имя</label>
+      <input type="text" id="firstName" [(ngModel)]="item.firstName" name="firstName" />
     </div>
-    <div class="form-field">
-      <label for="lastName">Фамилия:</label>
-      <input type="text" id="lastName" required [(ngModel)]="item.lastName" name="lastName"/>
+    <div class="input-group vertical">
+      <label for="lastName" class="doc">Фамилия</label>
+      <input type="text" id="lastName" [(ngModel)]="item.lastName" name="lastName" />
     </div>
-    <div class="form-field">
-      <label for="phone">Телефон:</label>
-      <input type="text" id="phone" required [(ngModel)]="item.phone" name="phone"/>
+    <div class="input-group vertical">
+        <label for="phone" class="doc">Телефон</label>        
+        <input type="tel" id="phone" [(ngModel)]="item.phone" name="phone" />
     </div>
-    
-    <button type="submit">Сохранить</button>
-    <button uiSref="list">Отмена</button>
-  </form>
+  </fieldset>
+  <button class="primary" type="submit">Сохранить</button>
+  <button uiSref="list">Отмена</button>
+</form>

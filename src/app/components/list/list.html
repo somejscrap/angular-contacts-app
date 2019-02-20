@@ -1,8 +1,14 @@
-<h3>Контакты</h3>
-<h4 *ngIf="!list.length">
-  список контактов пуст
-</h4>
-<ul>
-  <item *ngFor="let item of list" [item]="item" (itemIdToDelete)="deleteItem($event)"></item>
-</ul>
-<button uiSref="edit" [uiParams]="{ itemId: null }">Добавить</button>
+<div class="card fluid">
+  <div class="section">
+    <h3>Контакты</h3>
+  </div>
+  <div class="section double-padded">
+    <h4 *ngIf="!list.length" class="centered muted">
+      список контактов пуст
+    </h4>
+    <item *ngFor="let item of list" [item]="item" (itemIdToDelete)="deleteItem($event)"></item>
+  </div>
+  <div class="section">
+    <button uiSref="edit" [uiParams]="{ itemId: null }" class="primary">Добавить</button>
+  </div>
+</div>

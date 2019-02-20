@@ -1,7 +1,22 @@
-<h3>Просмотр</h3>
-  
-<div>Имя: {{item.firstName}}</div>
-<div>Фамилия: {{item.lastName}}</div>
-<div>Телефон: {{item.phone}}</div>
-
-<button uiSref="list">Назад</button>
+<div class="card fluid">
+    <div class="section">
+        <h3>Просмотр контакта</h3>
+    </div>
+    <div class="section double-padded">
+        <div class="row">
+            <div class="col-sm-2">Имя:</div>
+            <div>{{item.firstName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">Фамилия:</div>
+            <div>{{item.lastName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">Телефон:</div>
+            <div>{{item.phone}}</div>
+        </div>
+    </div>
+    <div class="section">
+        <button uiSref="list">Назад</button>
+    </div>
+</div>

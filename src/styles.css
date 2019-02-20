@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/mini.css/dist/mini-default.min.css';
+
+input {
+    width: 100%;
+}
+
+li {
+    padding: 10px 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.muted {
+    opacity: 0.2;
+}
+
+.button.fluid {
+    width: 100%;
+}

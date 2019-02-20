@@ -1,11 +1,15 @@
-<li>
-    <a uiSref="view" [uiParams]="{ itemId: item.id }">
-        {{item.firstName + ' ' + item.lastName}}
-    </a>
-    <a uiSref="edit" [uiParams]="{ itemId: item.id }">
-        [edit]
-    </a>
-    <a href="#" (click)="deleteItem(item.id)">
-        [delete]
-    </a>
-</li>
+<div class="row fluid">
+    <div class="col-sm-8">
+        <a class="fluid button" uiSref="view" [uiParams]="{ itemId: item.id }">
+            {{item.firstName||''}}&nbsp;{{item.lastName||''}}
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <a class="fluid centered button" uiSref="edit" [uiParams]="{ itemId: item.id }">
+            Изменить
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <button class="fluid secondary button" (click)="deleteItem(item.id)">Удалить</button>
+    </div>
+</div>
