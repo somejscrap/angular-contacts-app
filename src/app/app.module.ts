@@ -9,6 +9,7 @@ import { ListItem } from './components/listitem/listitem';
 import { Edit } from './components/edit/edit';
 import { View } from './components/view/view';
 import { StorageService } from './services/storage.service';
+import { AuthService } from './services/auth.service.js';
 
 import { uiRouterConfigFn } from './config/router.config';
 import { listState, editState, viewState } from './app.states';
@@ -29,6 +30,7 @@ let COMPONENTS =  [ App, List, ListItem, Edit, View ];
   ],
   providers: [ 
     { provide: StorageService, useClass: StorageService },
+    { provide: AuthService, useClass: AuthService },
   ],
   bootstrap: [App]
 })

@@ -1,23 +1,23 @@
 <h3 *ngIf="item.id">
-    Edit Contact
+    Редактирование
   </h3>
   <h3 *ngIf="!item.id">
-    Add Contact
+    Новый контакт
   </h3>
   <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
     <div class="form-field">
-      <label for="firstName">First Name:</label>
+      <label for="firstName">Имя:</label>
       <input type="text" id="firstName" required [(ngModel)]="item.firstName" name="firstName"/>
     </div>
     <div class="form-field">
-      <label for="lastName">Last Name:</label>
+      <label for="lastName">Фамилия:</label>
       <input type="text" id="lastName" required [(ngModel)]="item.lastName" name="lastName"/>
     </div>
     <div class="form-field">
-      <label for="phone">Phone:</label>
+      <label for="phone">Телефон:</label>
       <input type="text" id="phone" required [(ngModel)]="item.phone" name="phone"/>
     </div>
     
-    <button type="submit">Save</button>
-    <button uiSref="list">Close</button>
+    <button type="submit">Сохранить</button>
+    <button uiSref="list">Отмена</button>
   </form>
