@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Output} from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'item',
@@ -6,11 +6,10 @@ import {Component, Input, EventEmitter, Output} from '@angular/core';
 })
 export class ListItem {
   @Input() item;
-  @Output('itemIdToDelete') 
+  @Output('itemIdToDelete')
   deleteEmitter = new EventEmitter<String>();
 
   deleteItem(itemId) {
     this.deleteEmitter.emit(itemId);
   }
-
 }

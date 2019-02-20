@@ -1,14 +1,14 @@
 import { Component, Input, Inject } from '@angular/core';
 import { StorageService } from '../../services/storage.service';
 
-@Component({ 
-  providers: [ StorageService ], 
+@Component({
+  providers: [StorageService],
   template: require('./view.html')
 })
-export class View { 
+export class View {
   @Input() itemId;
   item = {};
-  
+
   constructor(@Inject(StorageService) private storageService) { }
 
   ngOnInit() {

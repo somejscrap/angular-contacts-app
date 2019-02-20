@@ -6,11 +6,11 @@ export class StorageService {
   itemsChanged = new Subject<[]>();
 
   items = JSON.parse(localStorage.getItem('contacts-data')) || [];
- 
+
   getAllItems() {
     return this.items.filter(i => !i.deleted);
   }
- 
+
   getItem(id) {
     return this.getAllItems().find(i => i.id === id) || {};
   }

@@ -14,21 +14,21 @@ import { AuthService } from './services/auth.service.js';
 import { uiRouterConfigFn } from './config/router.config';
 import { listState, editState, viewState } from './app.states';
 
-let STATES =  [ listState, editState, viewState ];
-let COMPONENTS =  [ App, List, ListItem, Edit, View ];
+let STATES = [listState, editState, viewState];
+let COMPONENTS = [App, List, ListItem, Edit, View];
 
 @NgModule({
   declarations: COMPONENTS,
   imports: [
     BrowserModule,
     FormsModule,
-    UIRouterModule.forRoot({ 
-      states: STATES, 
+    UIRouterModule.forRoot({
+      states: STATES,
       useHash: true,
       config: uiRouterConfigFn
     })
   ],
-  providers: [ 
+  providers: [
     { provide: StorageService, useClass: StorageService },
     { provide: AuthService, useClass: AuthService },
   ],
